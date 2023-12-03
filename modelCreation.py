@@ -150,3 +150,6 @@ train_dataset = getDs(path+'/processed_data_train/train/images',path+'/processed
 validation_dataset = getDs(path+'/processed_data_train/validation/images',path+'/processed_data_train/validation/masks',360)
 #train
 print(len(train_dataset))
+
+history = model.fit(train_dataset,validation_data = (validation_dataset),epochs=5)
+model.save('./model_dice_fix_bugs.hdf5')

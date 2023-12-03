@@ -6,11 +6,11 @@ Also, to get predictions I created group of functions to convert masks to rle. Y
 
 So, that was my general idea.
 
-To run my code you need install all packages. Download dataset for this competition. You must have this file structure.
-![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/be4e18bb-bf37-4d68-9e94-c292571a72c6)
+To run my code you need install all packages. Download dataset for this competition. You must have this file structure. <br>
+![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/be4e18bb-bf37-4d68-9e94-c292571a72c6) <br>
 Also you need create empty folders for processed_data_train
-![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/96208bd3-823b-41ac-8672-a1d08089136d)
-That is needed to create convertion between rle and mask.
+![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/96208bd3-823b-41ac-8672-a1d08089136d) <br>
+That is needed to create convertion between rle and mask. <br>
 
 #Training
 I used U-net model for training

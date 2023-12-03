@@ -1,0 +1,8 @@
+numpy
+tensorflow==2.14.0
+pandas
+scikit-image
+cv2
+psutil
+matplotlib
+PIL

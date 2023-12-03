@@ -8,8 +8,10 @@ So, that was my general idea.
 
 To run my code you need install all packages. Download dataset for this competition. You must have this file structure. <br>
 ![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/be4e18bb-bf37-4d68-9e94-c292571a72c6) <br>
-Also you need create empty folders for processed_data_train
+
 ![image](https://github.com/YakubT/Airbus-ship-segmentation/assets/73753564/96208bd3-823b-41ac-8672-a1d08089136d) <br>
+Also you need create empty folders for processed_data_train
+
 That is needed to create convertion between rle and mask. <br>
 
 #Training

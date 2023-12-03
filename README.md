@@ -25,3 +25,4 @@ I used dice loss for training
 # Result
 to generate submission csv file you need to run inferences.py.
 In this part I convert masks to rle using treshold. Treshold = 0.5. If value > 0.5 then it is part of ship.
+I did send result csv to competion because now I have no time to this (I need about a half of a day to create submission file) 

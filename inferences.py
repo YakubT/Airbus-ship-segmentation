@@ -62,8 +62,9 @@ def ship_box_to_rle(box,mask):
     curpos = startx*len(mask)+stary+1
     while curpos<=endpos:
         x = curpos//len(mask)
-        y = curpos%len(mask)
+        y = curpos%len(mask)-1
         if (mask[x][y]==1):
+            
             cnt+=1
             if (cnt==1):
                 pos = curpos
@@ -107,6 +108,9 @@ def clusterize_objects(segmentation_mask):
 
 def create_rle_from_mask(mask):
     clusterize_objs = list(clusterize_objects(np.array(mask)))
+    print(clusterize_objs)
+    plt.imshow(Image.fromarray(np.array(mask)*255))
+    plt.show()
     res = []
     for i in range(len (clusterize_objs)):
         res.append(ship_box_to_rle(np.array(clusterize_objs[i]['bbox']).tolist(),mask))
@@ -132,6 +136,7 @@ for filename in os.listdir(directory):
     #mask2 = model2.predict([_parse_function_2(f)])[0]
     mask = get_mask_as_image(mask)
     rle_tmp = create_rle_from_mask(mask)
+    print(rle_tmp)
     if (len(rle_tmp) > 20 or len(rle_tmp)==0):
         image_list.append(filename)
         rle_list.append(None)
@@ -139,5 +144,6 @@ for filename in os.listdir(directory):
         for i in rle_tmp:
             image_list.append(filename)
             rle_list.append(i)
+    
 df = pd.DataFrame({'ImageId':image_list,'EncodedPixels':rle_list})
 df.to_csv('./res.csv')

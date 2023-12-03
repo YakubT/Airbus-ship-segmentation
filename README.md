@@ -14,7 +14,7 @@ Also you need create empty folders for processed_data_train
 
 That is needed to create convertion between rle and mask. <br>
 
-#Training
+# Training
 I used U-net model for training
 I have limited resources for training so my model didn't train enough
 
@@ -22,6 +22,6 @@ You can look at modelCreationPreparation.py. This file is needed to convert rle 
 
 I used dice loss for training
 
-#Result
+# Result
 to generate submission csv file you need to run inferences.py.
 In this part I convert masks to rle using treshold. Treshold = 0.5. If value > 0.5 then it is part of ship.

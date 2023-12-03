@@ -108,9 +108,6 @@ def clusterize_objects(segmentation_mask):
 
 def create_rle_from_mask(mask):
     clusterize_objs = list(clusterize_objects(np.array(mask)))
-    print(clusterize_objs)
-    plt.imshow(Image.fromarray(np.array(mask)*255))
-    plt.show()
     res = []
     for i in range(len (clusterize_objs)):
         res.append(ship_box_to_rle(np.array(clusterize_objs[i]['bbox']).tolist(),mask))

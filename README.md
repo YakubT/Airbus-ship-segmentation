@@ -13,6 +13,7 @@ To run my code you need install all packages. Download dataset for this competit
 Also you need create empty folders for processed_data_train
 
 That is needed to create convertion between rle and mask. <br>
+In help folder I have csv files for training and sample submission
 
 # Training
 I used U-net model for training
